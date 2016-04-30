@@ -64,11 +64,18 @@ var searchTimer = window.setInterval(function () {
     //logo登录
     var logoA = DOM.children(DOM.getByClassName("QQ")[0], "a")[0];
     var logoClose = DOM.getByClassName("logoBoardClose")[0];
-    logoA.onclick = function () {
-        DOM.getByClassName("logoBoard")[0].style.display = "block";
-        var light = document.getElementById("light");
-        light.style.height = (document.documentElement.offsetHeight || document.body.offsetHeight) + "px";
-    };
+    logoA.onclick = openLogo;
+    DOM.getByClassName("login")[0].onclick=openLogo;
+    DOM.getByClassName("login")[1].onclick=openLogo;
+    function openLogo() {
+            DOM.getByClassName("logoBoard")[0].style.display = "block";
+            var light = document.getElementById("light");
+            light.style.height = (document.documentElement.offsetHeight || document.body.offsetHeight) + "px";
+        DOM.getByClassName("wxLogo")[0].style.display="none";
+        DOM.getByClassName("qqLogo")[0].style.display="block";
+        DOM.addClass(document.getElementById("tabOne"),"optionSelectQQ");
+        DOM.removeClass(document.getElementById("tabTwo"),"optionSelectWx");
+    }
     logoClose.onclick = function () {
         DOM.getByClassName("logoBoard")[0].style.display = "none";
         light.style.height = "0";
@@ -229,8 +236,7 @@ var searchTimer = window.setInterval(function () {
         }
     }
 
-    var aryScroll = [];
-    aryScroll.push(0);
+    var aryScroll = [0];
     window.onscroll = function () {
         var h = document.documentElement.scrollTop || document.body.scrollTop;
         aryScroll.push(h);
@@ -252,10 +258,12 @@ var searchTimer = window.setInterval(function () {
         //搜索框下滑隐藏
         var banner = DOM.getByClassName("banner")[0];
         if (h > 126) {
-            animate(banner, {height: 0}, 1000);
+            // animate(banner, {height: 0}, 1000);
+            banner.style.display="none";
         }
         if (aryScroll[aryScroll.length - 2] > aryScroll[aryScroll.length - 1]) {
-            animate(banner, {height: 126}, 1000);
+            // animate(banner, {height: 253}, 1000);
+            banner.style.display="block";
         }
     };
     /**

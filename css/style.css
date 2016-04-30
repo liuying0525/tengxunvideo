@@ -37,7 +37,7 @@ span{display: inline-block;}
 /*------banner------*/
 
  /*   .bannertop--logo*/
-.banner{width: 100%;clear: both;z-index: 98;position: fixed;top:0;left: 0;height:160px;overflow: hidden}
+.banner{width: 100%;clear: both;z-index: 98;position: fixed;top:0;left: 0;}
 .banner .bannertop{background: #fff;float: left;width: 100%}
 .bannertop div.logo{width: 360px;background: url("../images/logo.png") no-repeat 0 -54px;clear: both;padding-top:10px;float: left;padding-left: 55px;}
 .bannertop div.logo span{float: left;background:url("../images/logo.png") no-repeat 0 0;width: 160px;height:54px; }
@@ -46,7 +46,7 @@ span{display: inline-block;}
 /*bannertop -input*/
 .bannertop form{float: left;padding-top: 16px;line-height: 44px;position: relative;}
 .bannertop form input{background: url("../images/sprite_search.png") repeat-x 0 -54px;width: 398px;height:44px;border:1px solid #cecece;float: left;border-right:none;padding-left: 33.5px;outline: none;font: 12px/1.5 hiragino sans gb,microsoft yahei,simsun;font-size: 14px;}
-.bannertop form i{float: left;height:46px;background: url("../images/sprite_search.png") no-repeat 0px  -108px;width: 91px;}
+.bannertop form i{float: left;height:46px;background: url("../images/sprite_search.png") no-repeat 0  -108px;width: 91px;}
 .bannertop form span.glass{display: inline-block;width: 14px;height:14px;background: url("../images/sprite_search.png") no-repeat 0 -206px;position: absolute;top:33px;left:11px;}
 
 /*bannertop-ul*/
@@ -87,7 +87,7 @@ div.webktlinear{background:-webkit-linear-gradient(left,#18AAD0,#58CC1A,#22B0B4,
 
 
 /*bannerbottom*/
-.bannerbottom{float: left;width: 100%;box-shadow: 0 2px 6px rgba(0,0,0,.4); background-color: rgba(247,247,247,.72);transition: all .2s ease;position: relative;z-index: 2}
+.bannerbottom{float: left;width: 100%;box-shadow: 0 2px 6px rgba(0,0,0,.4); background-color: rgba(247,247,247,0.9);transition: all .2s ease;position: relative;z-index: 2}
 .bannerbottom ul{margin:0 50px 0 46.5px;}
 .bannerbottom ul.bannerbottom-left{float: left;}
 .bannerbottom ul.bannerbottom-right{float: right;}
@@ -136,7 +136,7 @@ div.viweinner{position: relative;left: 0;width:23520px; }
 div.viweinner div {float: left;width: 1680px}
 
 /*-----------viwepager--------*/
-div.viwepager{float: left;overflow: hidden;height:500px;width: 100%;clear: both;position: relative;z-index: 0;margin-bottom: 25px;margin-top:116px;}
+div.viwepager{float: left;overflow: hidden;height:500px;width: 100%;clear: both;position: relative;z-index: 0;margin-bottom: 25px;margin-top:70px;}
 div.viwepager div.viwebutton{height:50px;width: 1012px;background: rgba(0,0,0,0.5);position: absolute;bottom: 34px;left:169px;padding-top: 7px;padding-bottom: 7px;}
 div.viwebutton div.viweouterside{width: 745px;float: left;overflow: hidden;height:50px;}
 div.viwebutton div.viweouterside div.viwebtphotouter{width: 637px;height:50px;overflow: hidden;float: left}
@@ -314,7 +314,7 @@ div.hotteleplayr_b div._switchad div.ad_page a.current{width: 4px;height: 4px;ba
     background: black;
     opacity: 0.5;
     z-index: 100;
-    position: fixed;
+    position: f;
     top: 0;
     left: 0;
     width: 100%;

@@ -21,8 +21,10 @@ on(DOM.getByClassName("password")[0],"blur",function(){if(this.value==""){this.v
 
 
 /*tab切换*/
-on(document.getElementById("tabOne"),"click",function(){DOM.getByClassName("qqLogo")[0].style.display="block";DOM.getByClassName("wxLogo")[0].style.display="none";this.style.borderBottom="2px solid #31A4F6";document.getElementById("tabTwo").style.borderBottom="0 solid #31A4F6";});
-on(document.getElementById("tabTwo"),"click",function(){DOM.getByClassName("qqLogo")[0].style.display="none";DOM.getByClassName("wxLogo")[0].style.display="block";this.style.borderBottom="2px solid #4AB218";document.getElementById("tabOne").style.borderBottom="0 solid #31A4F6";});
+/*on(document.getElementById("tabOne"),"click",function(){DOM.getByClassName("qqLogo")[0].style.display="block";DOM.getByClassName("wxLogo")[0].style.display="none";this.style.borderBottom="2px solid #31A4F6";document.getElementById("tabTwo").style.borderBottom="0 solid #31A4F6";});
+on(document.getElementById("tabTwo"),"click",function(){DOM.getByClassName("qqLogo")[0].style.display="none";DOM.getByClassName("wxLogo")[0].style.display="block";this.style.borderBottom="2px solid #4AB218";document.getElementById("tabOne").style.borderBottom="0 solid #31A4F6";});*/
+on(document.getElementById("tabOne"),"click",function(){DOM.getByClassName("qqLogo")[0].style.display="block";DOM.getByClassName("wxLogo")[0].style.display="none";DOM.addClass(this,"optionSelectQQ");DOM.removeClass(document.getElementById("tabTwo"),"optionSelectWx")});
+on(document.getElementById("tabTwo"),"click",function(){DOM.getByClassName("qqLogo")[0].style.display="none";DOM.getByClassName("wxLogo")[0].style.display="block";DOM.addClass(this,"optionSelectWx");DOM.removeClass(document.getElementById("tabOne"),"optionSelectQQ")});
 var QQCodeHide=document.getElementById("QQCodeHideId");
 window.setInterval(function () {
     QQCodeHide.style.display="block";
